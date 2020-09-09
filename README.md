@@ -12,3 +12,56 @@ Once a web page has been retrieved, the browser's rendering engine displays it o
 Web pages usually contain hyperlinks to other pages and resources. Each link contains a URL, and when it is clicked or tapped, the browser navigates to the new resource. Thus the process of bringing content to the user begins again.
 
 Most browsers use an internal cache of web page resources to improve loading times for subsequent visits to the same page. The cache can store many items, such as large images, so they do not need to be downloaded from the server again. Cached items are usually only stored for as long as the web server stipulates in its HTTP response messages.
+
+EXAMPLE
+	private void initComponents() {
+		frame = new JFrame();
+		paneltop = new JPanel();
+		
+		try {
+			url = new URL("https://www.google.com/");
+			
+		}
+		catch(MalformedURLException mue) {
+			JOptionPane.showMessageDialog(null, mue);
+		}
+		try {
+			editor = new JEditorPane(url);
+			editor.setEditable(false);
+			
+		}
+		catch(IOException e) {
+			JOptionPane.showMessageDialog(null, e);
+			
+		}
+		
+		scroll = new JScrollPane(editor,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		field = new JTextField();
+		field.setBounds(200, 10, 200, 50);
+		SwingUtilities.invokeLater(new Runnable() {
+			public void run() {
+				field.setText(url.toString());
+			}
+		});
+		
+		button = new JButton("Go Url");
+		button.setBounds(500, 10, 100, 50);
+		button.addActionListener(new ActionListener() {
+		
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				try {
+					editor.setPage(field.getText());
+				}
+				catch(IOException e1) {
+					JOptionPane.showMessageDialog(null, e1);
+				}
+			}
+		});
+	
+	
+	}
+  
+  
