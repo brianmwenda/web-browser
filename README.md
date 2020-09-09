@@ -12,6 +12,12 @@ Once a web page has been retrieved, the browser's rendering engine displays it o
 Web pages usually contain hyperlinks to other pages and resources. Each link contains a URL, and when it is clicked or tapped, the browser navigates to the new resource. Thus the process of bringing content to the user begins again.
 
 Most browsers use an internal cache of web page resources to improve loading times for subsequent visits to the same page. The cache can store many items, such as large images, so they do not need to be downloaded from the server again. Cached items are usually only stored for as long as the web server stipulates in its HTTP response messages.
+Pre-release
+ v9.0
+ 64dc7e9
+java-web-browser
+@brianmwenda brianmwenda released this 17 minutes ago · 4 commits to master since this release
+
 
 ![win1](https://user-images.githubusercontent.com/54397128/92627141-9d578000-f2d3-11ea-9d85-e2842011a451.jpg)
 ![win](https://user-images.githubusercontent.com/54397128/92627146-9df01680-f2d3-11ea-8753-9407cc9ed4e3.jpg)
