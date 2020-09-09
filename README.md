@@ -13,6 +13,8 @@ Web pages usually contain hyperlinks to other pages and resources. Each link con
 
 Most browsers use an internal cache of web page resources to improve loading times for subsequent visits to the same page. The cache can store many items, such as large images, so they do not need to be downloaded from the server again. Cached items are usually only stored for as long as the web server stipulates in its HTTP response messages.
 
+![win1](https://user-images.githubusercontent.com/54397128/92627141-9d578000-f2d3-11ea-9d85-e2842011a451.jpg)
+![win](https://user-images.githubusercontent.com/54397128/92627146-9df01680-f2d3-11ea-8753-9407cc9ed4e3.jpg)
 EXAMPLE
 
 	private void initComponents() {
